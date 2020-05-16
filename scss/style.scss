@@ -1,0 +1,89 @@
+$maincolor:rgb(239, 240, 240);
+$header:#222;
+$textcolor: $maincolor;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin settings {
+    padding: 0; margin: 0;
+}
+body{
+    background:$maincolor;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+.wrapper{
+    max-width: 1170px;
+    margin: 0 auto;
+    min-height: 100%;
+}
+header{
+    background: $header no-repeat;
+    background-size: cover;  
+    position: fixed; z-index: 1;
+    width: 100%;
+    .title{
+        text-align: center;
+    }
+    h1{
+        color: $textcolor;
+        @include settings();
+        font-weight: 300;
+        padding-bottom: 5px;
+    }
+}
+// counter
+.counter{
+    
+    padding-top: 120px;
+}
+.counter__area textarea{
+    background: none;
+    resize: none;
+    width: 800px;
+    margin-top: 20px;
+    outline: none;
+    height: 300px;
+}
+.counter__area{
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+// footer
+.footer{
+    position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 80px;
+    background:#000 no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.footer__body{
+    
+    display: flex;
+    justify-content: space-around;
+} 
+.footer__soc{
+    align-self: center;
+    padding-top: 20px;
+}
+.footer__soc img{
+    transition: .3s;
+    padding-left: 20px;
+}
+.footer__soc img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.footer__soc{
+    .tg{
+        width:7.5%;
+    }
+}

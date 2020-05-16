@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="scss/style.css" rel="stylesheet">
+    <link href="scss/norm.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Online counter</title>
+</head>
+<body>
+<header class="header">
+    <div class="wrapper">
+        <div class="title">
+            <h1>Я рад видеть тебя на сайте Online counter!</h1>
+        </div>
+    </div>
+</header>
+<section class="counter">
+    <div id='counter' class="counter__area">
+        <div class="count__main">
+            <textarea v-model='textCount'></textarea>
+        </div>
+        <div class="coun__btn">
+            <h3>Символов: {{ textCount.length }}</h3>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="wrapper">
+        <div class="footer__body">
+            <div class="footer__soc">
+                <span>Связь со мной:</span>
+               <a href="https://vk.com/dimaelite"><img src="imgs/footer/vk.png" class="lax" alt="vk"></a>
+                <a href="https://instagram.com/dimovski__?igshid=4qa6iy169932"><img src="imgs/footer/insta.png" class="lax" alt="insta"></a>
+                <a href="https://t.me/dimovski5"><img src="imgs/footer/tg.png" class="tg" alt="tg"></a>
+        </div>
+        </div>
+    </div>
+</footer>
+</body>
+<script>
+    var count = new Vue({
+        el:"#counter",
+        data:{
+            textCount:"",
+        },
+        watch:{
+            textCount: function(){
+                if(this.textCount > 0){
+                   
+                }
+            }
+        }
+    })
+</script>
+</html>
